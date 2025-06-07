@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golpe de Paz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="mainMenu" class="menu">
+    <h1>Golpe de Paz</h1>
+    <button onclick="startGame()">Iniciar Juego</button>
+    <button onclick="toggleSound()">🔊 Sonido</button>
+  </div>
+
+  <div id="gameUI" class="hidden">
+    <p>Monedas: <span id="coinCount">0</span></p>
+    <p id="adviceText">¡Recoge una moneda para un consejo!</p>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <div id="controls">
+      <button onclick="moveLeft()">⬅️</button>
+      <button onclick="attack()">✊</button>
+      <button onclick="moveRight()">➡️</button>
+    </div>
+  </div>
+
+  <div id="gameOver" class="hidden">
+    <h2>Game Over</h2>
+    <button onclick="restartGame()">Reintentar</button>
+  </div>
+
+  <audio id="bgMusic" loop autoplay>
+    <source src="relaxing.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
